@@ -1,4 +1,4 @@
-cookbook 'docker', path: 'cookbooks/chef-docker-master'
+cookbook 'docker', path: 'cookbooks/docker'
 
 source "https://supermarket.getchef.com"
 
