@@ -56,6 +56,7 @@ node[:deploy].each do |application, deploy|
   Chef::Log.info("IMAGE: Pulling #{deploy[:environment_variables][:registry_image]}:#{deploy[:environment_variables][:registry_tag]}")
   docker_image "#{deploy[:environment_variables][:registry_image]}" do
     tag deploy[:environment_variables][:registry_tag]
+    action :pull_if_missing
   end
 
   dockerenvs = " "
