@@ -1,9 +1,9 @@
-docker_image 'hello-world'
+docker_image 'docker-test-image'
 
 docker_image 'busybox'
 docker_image 'tduffield/testcontainerd'
 
-docker_image 'hello-world' do
+docker_image 'docker-test-image' do
   action :remove
 end
 
