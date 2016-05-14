@@ -2,6 +2,7 @@ case node[:platform]
   when "ubuntu","debian"
     package "docker.io" do
       action :install
+      options '-o Dpkg::Options::="--force-confold"'
     end
   when 'centos','redhat','fedora','amazon'
     package "docker" do
